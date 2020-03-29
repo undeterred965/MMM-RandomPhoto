@@ -1,6 +1,3 @@
-# No support
-I don't support this module anymore. Few free to fork and modify it if you want to use it or fork another fork.
-
 # MMM-RandomPhoto
 This a module for the [MagicMirror](https://github.com/MichMich/MagicMirror). It will show a random photo from an url.
 
