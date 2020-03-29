@@ -2,17 +2,14 @@
 
 /* Magic Mirror
  * Module: MMM-RandomPhoto
- *
- * By Diego Vieira <diego@protos.inf.br>
- * ICS Licensed.
- */
+*/
 
 Module.register("MMM-RandomPhoto",{
 	defaults: {
-		opacity: 0.3,
+		opacity: 0.4,
 		animationSpeed: 500,
 		updateInterval: 60,
-		url: 'https://unsplash.it/1920/1080/?random'
+		url: 'https://picsum.photos/800/480/?random'
 	},
 
 	start: function() {
@@ -26,16 +23,16 @@ Module.register("MMM-RandomPhoto",{
 		var img = $('<img />').attr('src', url);
 
 		img.on('load', function() {
-				$('#mmm-photos-placeholder1').attr('src', url).animate({
+				$('#photos-placeholder1').attr('src', url).animate({
 					opacity: self.config.opacity
 				}, self.config.animationSpeed, function() {
-					$(this).attr('id', 'mmm-photos-placeholder2');
+					$(this).attr('id', 'photos-placeholder2');
 				});
 
-				$('#mmm-photos-placeholder2').animate({
+				$('#photos-placeholder2').animate({
 					opacity: 0
 				}, self.config.animationSpeed, function() {
-					$(this).attr('id', 'mmm-photos-placeholder1');
+					$(this).attr('id', 'photos-placeholder1');
 				});
 		});
 
@@ -47,7 +44,7 @@ Module.register("MMM-RandomPhoto",{
 
 	getDom: function() {
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = '<img id="mmm-photos-placeholder1" style="opacity: 0; position: absolute" /><img id="mmm-photos-placeholder2" style="opacity: 0; position: absolute" />';
+		wrapper.innerHTML = '<img id="photos-placeholder1" style="top: 0px; opacity: 0; position: absolute" /><img id="photos-placeholder2" style="top: 0px; opacity: 0; position: absolute" />';
 		return wrapper;
 	},
 	getScripts: function() {
