@@ -26,7 +26,7 @@ Here is an example of an entry in `config.js`
 		opacity: 0.3,
 		animationSpeed: 500,
 		updateInterval: 60,
-		url: 'https://unsplash.it/1920/1080/?random'
+		url: 'https://picsum.photos/800/480/?random'
 	}
 },
 ```
