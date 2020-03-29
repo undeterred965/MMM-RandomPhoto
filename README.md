@@ -15,7 +15,7 @@ The entry in `config.js` can include the following options:
 |`opacity`|The opacity of the image.<br><br>**Type:** `double`<br>Default 0.3|
 |`animationSpeed`|How long the fade out and fade in of photos should take.<br><br>**Type:** `int`<br>Default 500|
 |`updateInterval`|How long before getting a new image.<br><br>**Type:** `int`<br>Default 60 seconds|
-|`url`|URL to pull a new image from.<br><br>**Type:** `string`<br>Default https://picsum.photo/800/480/?random|
+|`url`|URL to pull a new image from.<br><br>**Type:** `string`<br>Default https://picsum.photos/800/480/?random|
 
 Here is an example of an entry in `config.js`
 ```
