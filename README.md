@@ -2,7 +2,7 @@
 This a module for the [MagicMirror](https://github.com/MichMich/MagicMirror). It will show a random photo from an url.
 
 ## Installation
-1. Navigate into your MagicMirror's `modules` folder and execute `git clone https://github.com/diego-vieira/MMM-RandomPhoto.git`.
+1. Navigate into your MagicMirror's `modules` folder and execute `git clone https://github.com/undeterred965/MMM-RandomPhoto.git`.
 2. cd `cd MMM-RandomPhoto`
 3. Execute `npm install` to install the node dependencies.
 
@@ -15,7 +15,7 @@ The entry in `config.js` can include the following options:
 |`opacity`|The opacity of the image.<br><br>**Type:** `double`<br>Default 0.3|
 |`animationSpeed`|How long the fade out and fade in of photos should take.<br><br>**Type:** `int`<br>Default 500|
 |`updateInterval`|How long before getting a new image.<br><br>**Type:** `int`<br>Default 60 seconds|
-|`url`|URL to pull a new image from.<br><br>**Type:** `string`<br>Default https://unsplash.it/1920/1080/?random|
+|`url`|URL to pull a new image from.<br><br>**Type:** `string`<br>Default https://picsum.photo/800/480/?random|
 
 Here is an example of an entry in `config.js`
 ```
