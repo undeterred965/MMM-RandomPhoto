@@ -7,8 +7,8 @@
 Module.register("MMM-RandomPhoto",{
 	defaults: {
 		opacity: 0.4,
-		animationSpeed: 500,
-		updateInterval: 60,
+		animationSpeed: 1000,
+//		updateInterval: 60,
 		url: 'https://picsum.photos/800/480/?random'
 	},
 
@@ -36,10 +36,15 @@ Module.register("MMM-RandomPhoto",{
 				});
 		});
 
-		setTimeout(function() {
-			self.load();
-		}, (self.config.updateInterval * 1000));
+//		setTimeout(function() {
+//			self.load();
+//		}, (self.config.updateInterval * 1000));
 		
+	},
+	
+	notificationReceived: function(notification, payload, sender) {
+		var self = this;
+		if (notification === "CHANGE_BACKGROUND_IMAGE" ) self.load();
 	},
 
 	getDom: function() {
